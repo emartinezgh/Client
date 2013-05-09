@@ -57,14 +57,14 @@ class MainFrame(wx.Frame):
 
     def __init__(self):
         wx.Frame.__init__(self, parent=None, id=wx.ID_ANY,
-                          title='WSMod', size=(375,460))
-        self.CreateMenu()
+                          title='D3Up.com Client', size=(375,460))
+        # self.CreateMenu()
 
         windowInfo = cefpython.WindowInfo()
         windowInfo.SetAsChild(self.GetHandle())
         self.browser = cefpython.CreateBrowserSync(windowInfo,
                 browserSettings={},
-                navigateUrl=GetApplicationPath("http://wsmod.com"))
+                navigateUrl=GetApplicationPath("http://d3up.com/ajax/compare/?&controller=ajax&action=compare&module=default&battletag=&build=379278&name=TRIUMVIRATE&quality=Legendary&type=Source&dps=0&meta=&stats=65-348%20Dmg,%205%20FireD,%206%20LtnD,%205%20ArcD,%2079%20Str,%20201%20Int,%2013%20MaxArcP,%208.0%20Crit"))
 
         self.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
         self.Bind(wx.EVT_SIZE, self.OnSize)
