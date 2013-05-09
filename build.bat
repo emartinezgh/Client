@@ -1,0 +1,1 @@
+python pyinstaller\pyinstaller.py -F -w -p z:\projects\Client z:\projects\Client\d3up.spec
